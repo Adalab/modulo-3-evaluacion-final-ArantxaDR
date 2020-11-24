@@ -5,7 +5,6 @@ import CharacterList from "./CharacterList";
 import React, { useEffect, useState } from "react";
 import Footer from "./Footer";
 import getDataFromApi from "../services/DataFromApi";
-import { computeHeadingLevel } from "@testing-library/react";
 
 const App = () => {
   const [items, setItems] = useState([]);
@@ -22,14 +21,20 @@ const App = () => {
       setSpeciesFilter(data.value);
     }
   };
-
+  const filteredCharacters = items
+    .filter((item) => {
+      return item.name.toUpperCase().includes(nameFilter.toUpperCase());
+    })
+    .filter((item) => {
+      return speciesFilter === "All" ? true : item.species === speciesFilter;
+    });
   return (
     <>
       {/* <Header /> */}
       <h1 className="title">Buscador de personajes</h1>
       <main className="main">
         <Filters handleFilters={handleFilters} />
-        <CharacterList items={items} />
+        <CharacterList items={filteredCharacters} />
       </main>
       <Footer />
     </>
