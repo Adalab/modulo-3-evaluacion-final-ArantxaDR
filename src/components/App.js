@@ -17,7 +17,7 @@ const App = () => {
       <h1 className="title">Buscador de personajes</h1>
       <main className="main">
         <Filters />
-        <CharacterList />
+        <CharacterList items={items} />
       </main>
       <Footer />
     </>

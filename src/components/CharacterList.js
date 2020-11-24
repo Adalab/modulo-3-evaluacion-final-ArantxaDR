@@ -1,15 +1,14 @@
 import React from "react";
+import CharacterCard from "./CharacterCard";
 
-const CharacterList = () => {
+const CharacterList = (props) => {
+  const itemsElements = props.items.map((items) => {
+    return <CharacterCard key={items.id} items={items} />;
+  });
+
   return (
     <section>
-      <ul className="card">
-        <li className="card_item">
-          <img className="card_item__img" alt="Character portrait"></img>
-          <h1 className="card_item__name">Personaje</h1>
-          <p className="card_item__species">Especie</p>
-        </li>
-      </ul>
+      <ul className="card">{itemsElements}</ul>
     </section>
   );
 };
