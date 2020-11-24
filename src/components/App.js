@@ -44,10 +44,9 @@ const App = () => {
 
   return (
     <>
-      {/* <Header /> */}
-      <h1 className="title">Buscador de personajes</h1>
+      <Header />
+
       <main className="main">
-        <Header />
         <Route exact path="/">
           <Filters handleFilters={handleFilters} />
           <CharacterList items={filteredCharacters} />
