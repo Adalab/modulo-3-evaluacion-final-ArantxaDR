@@ -3,6 +3,7 @@ import React from "react";
 const CharacterCard = (props) => {
   return (
     <li className="card_item">
+      <a href={`#/character/${props.items.id}`} />
       <img
         className="card_item__img"
         src={props.items.photo}
