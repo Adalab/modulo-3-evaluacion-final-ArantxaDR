@@ -1,7 +1,16 @@
 .card_detail__container {
-  background-color: lime;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  background-color: green;
 }
 .home_link__img {
   height: 50px;
   width: 50px;
+}
+
+.card_detail__list {
+  list-style: none;
 }

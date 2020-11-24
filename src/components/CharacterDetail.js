@@ -20,28 +20,17 @@ const CharacterDetail = (props) => {
             <div className="card_title">
               <h2>{props.name}</h2>
             </div>
-            <ul>
+            <ul className="card_detail__list">
               <li>{`Status: ${props.item.status}`}</li>
+              <i class="fas fa-skull"></i>
+              <i class="fas fa-heartbeat"></i>
               <li>{`Specie: ${props.item.species}`}</li>
+              <i class="fas fa-user"></i>
+              <i class="fas fa-rocket"></i>
               <li>{`Origin: ${props.item.origin}`}</li>
               <li>{`Episodes Nº: ${parseInt(props.item.episodes.lenght)}`}</li>
             </ul>
           </div>
-<<<<<<< HEAD
-          <ul>
-            <li>
-              {`Status: ${props.item.status}`}
-              <i class="fas fa-skull"></i>
-              <i class="fas fa-heartbeat"></i>
-            </li>
-            <li>{`Specie: ${props.item.species}`}</li>
-            <i class="fas fa-user"></i>
-            <i class="fas fa-rocket"></i>
-            <li>{`Origin: ${props.item.origin}`}</li>
-            <li>{`Episodes Nº: ${parseInt(props.item.episodes.lenght)}`}</li>
-          </ul>
-=======
->>>>>>> feature#4/chracterDetail
         </div>
       </>
     );
