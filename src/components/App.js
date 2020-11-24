@@ -1,15 +1,18 @@
 import "../stylesheets/App.scss";
-import Header from "./Header";
+// import Header from "./Header";
 import Filters from "./Filters";
 import CharacterList from "./CharacterList";
+import CharacterDetail from "./CharacterDetail";
 import React, { useEffect, useState } from "react";
 import Footer from "./Footer";
 import getDataFromApi from "../services/DataFromApi";
+import { Route, Switch } from "react-router-dom";
 
 const App = () => {
   const [items, setItems] = useState([]);
   const [nameFilter, setNameFilter] = useState("");
   const [speciesFilter, setSpeciesFilter] = useState("All");
+
   useEffect(() => {
     getDataFromApi().then((data) => setItems(data));
   }, []);
@@ -28,13 +31,28 @@ const App = () => {
     .filter((item) => {
       return speciesFilter === "All" ? true : item.species === speciesFilter;
     });
+
+  const renderCharacterDetail = (props) => {
+    const itemId = parseInt(props.match.params.id);
+
+    const findCharacter = items.find((item) => {
+      return item.id === itemId;
+    });
+    return <CharacterDetail item={findCharacter} />;
+  };
+
   return (
     <>
       {/* <Header /> */}
       <h1 className="title">Buscador de personajes</h1>
       <main className="main">
-        <Filters handleFilters={handleFilters} />
-        <CharacterList items={filteredCharacters} />
+        <Route exact path="/">
+          <Filters handleFilters={handleFilters} />
+          <CharacterList items={filteredCharacters} />
+        </Route>
+        <Switch>
+          <Route path="/character/:id" render={renderCharacterDetail} />
+        </Switch>
       </main>
       <Footer />
     </>
