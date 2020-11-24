@@ -1,6 +1,9 @@
-import "../stylesheets/App.css";
-
+import "../stylesheets/App.scss";
+import Header from "./Header";
+import Filters from "./Filters";
+import CharacterList from "./CharacterList";
 import React from "react";
+import Footer from "./Footer";
 
 class App extends React.Component {
   constructor(props) {
@@ -8,7 +11,14 @@ class App extends React.Component {
     this.state = {};
   }
   render() {
-    return <h1>Hola mundo</h1>;
+    return (
+      <>
+        {/* <Header /> */}
+        <Filters />
+        <CharacterList />
+        <Footer />
+      </>
+    );
   }
 }
 
