@@ -38,6 +38,7 @@ const App = () => {
     const findCharacter = items.find((item) => {
       return item.id === itemId;
     });
+
     return <CharacterDetail item={findCharacter} />;
   };
 
