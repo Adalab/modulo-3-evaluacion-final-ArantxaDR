@@ -16,8 +16,14 @@ const CharacterDetail = (props) => {
             <h2>{props.name}</h2>
           </div>
           <ul>
-            <li>{`Status: ${props.item.status}`}</li>
+            <li>
+              {`Status: ${props.item.status}`}
+              <i class="fas fa-skull"></i>
+              <i class="fas fa-heartbeat"></i>
+            </li>
             <li>{`Specie: ${props.item.species}`}</li>
+            <i class="fas fa-user"></i>
+            <i class="fas fa-rocket"></i>
             <li>{`Origin: ${props.item.origin}`}</li>
             <li>{`Episodes Nº: ${parseInt(props.item.episodes.lenght)}`}</li>
           </ul>
