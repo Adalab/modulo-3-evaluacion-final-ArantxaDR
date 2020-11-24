@@ -1,5 +1,5 @@
 import "../stylesheets/App.scss";
-// import Header from "./Header";
+import Header from "./Header";
 import Filters from "./Filters";
 import CharacterList from "./CharacterList";
 import CharacterDetail from "./CharacterDetail";
@@ -47,6 +47,7 @@ const App = () => {
       {/* <Header /> */}
       <h1 className="title">Buscador de personajes</h1>
       <main className="main">
+        <Header />
         <Route exact path="/">
           <Filters handleFilters={handleFilters} />
           <CharacterList items={filteredCharacters} />
