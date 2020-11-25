@@ -7,11 +7,13 @@
 .card_detail {
   width: 550px;
   height: 300px;
+
   &__list {
     list-style: none;
   }
 
   &__container {
+    box-shadow: 5px 5px $color-secondary;
     line-height: 25px;
     display: flex;
     flex-direction: row;

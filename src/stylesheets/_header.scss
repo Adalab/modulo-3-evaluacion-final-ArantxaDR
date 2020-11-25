@@ -5,11 +5,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   margin-top: 10px;
 }
 .title {
   font-size: 70px;
   font-family: $font-secondary;
   color: $color-secondary;
+  text-shadow: 0 0 10px $color-terciary, 0 0 15px$color-terciary;
 }
