@@ -1,23 +1,21 @@
+@import "./core/variables";
+
 .container_character__notfound {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.home_link {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  &__text {
-    font-family: $font-primary;
-  }
-}
+
 .title_character__notfound {
   margin-bottom: 30px;
   font-family: $font-primary;
-  color: $color-quaternary;
+  color: $color-secondary;
+}
+.title_character__tryagain {
+  font-size: 25px;
+  font-family: $font-primary;
+  color: $color-secondary;
 }
 .img_notfound {
   height: 300px;
