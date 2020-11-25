@@ -1,10 +1,30 @@
-.card_detail__container {
+.main {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: fit-content;
-  background-color: green;
+}
+.card_detail {
+  width: 550px;
+  height: 300px;
+
+  &__container {
+    line-height: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 5px solid $color-quaternary;
+    border-radius: 5px;
+    width: 500px;
+    background-color: $color-terciary;
+    justify-content: space-around;
+    align-items: center;
+    color: $color-secondary;
+  }
+  &__img {
+    height: 300px;
+    width: 300px;
+  }
 }
 .home_link {
   display: flex;
