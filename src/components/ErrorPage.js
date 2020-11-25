@@ -10,11 +10,11 @@ const ErrorPage = () => {
         <img className="home_link__img" src={gunPortal} alt="Gunportal" />
         <p className="home_link__text">Home </p>
       </Link>
-      <div className="container__character--notfound">
-        <h2 className="route__character-notfound">
+      <div className="container_character__notfound">
+        <h2 className="title_character__notfound">
           Watch the show!!!!! That's not a character's name
         </h2>
-        <img src={errorImg} alt="no encontrado" />
+        <img className="img_notfound" src={errorImg} alt="Not found" />
       </div>
     </>
   );

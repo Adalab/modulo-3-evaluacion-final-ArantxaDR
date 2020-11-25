@@ -26,7 +26,7 @@ const Filters = (props) => {
         />
 
         <label className="form_label" htmlFor="species">
-          Especie
+          Specie
         </label>
         <select
           className="form_input__text"
