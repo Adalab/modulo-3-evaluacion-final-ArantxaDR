@@ -7,6 +7,9 @@
 .card_detail {
   width: 550px;
   height: 300px;
+  &__list {
+    list-style: none;
+  }
 
   &__container {
     line-height: 25px;
@@ -32,18 +35,14 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  &__img {
+    height: 50px;
+    width: 50px;
+    margin-right: 50px;
+  }
   &__text {
     font-size: 40px;
     color: $color-secondary;
     font-family: $font-primary;
   }
-}
-.home_link__img {
-  height: 50px;
-  width: 50px;
-  margin-right: 50px;
-}
-
-.card_detail__list {
-  list-style: none;
 }

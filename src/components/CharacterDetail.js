@@ -27,11 +27,18 @@ const CharacterDetail = (props) => {
               </div>
               <ul className="card_detail__list">
                 <li>{`Status: ${props.item.status}`}</li>
-                <i className="fas fa-skull"></i>
-                <i className="fas fa-heartbeat"></i>
+                {props.item.status === "Alive" ? (
+                  <i className="fas fa-heartbeat"></i>
+                ) : (
+                  <i className="fas fa-skull"></i>
+                )}
                 <li>{`Specie: ${props.item.species}`}</li>
-                <i className="fas fa-user"></i>
-                <i className="fas fa-rocket"></i>
+                {props.item.species === "Human" ? (
+                  <i className="fas fa-user"></i>
+                ) : (
+                  <i className="fas fa-rocket"></i>
+                )}
+
                 <li>{`Origin: ${props.item.origin}`}</li>
                 <li>{`Episodes Nº: ${props.item.episodes.length}`}</li>
               </ul>
