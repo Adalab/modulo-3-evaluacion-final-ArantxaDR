@@ -5,8 +5,8 @@ class Header extends React.Component {
   render() {
     return (
       <header className="App-header">
-        <img src={headerImg} alt="Catch them all" />{" "}
-        <h1 className="title">Buscador de personajes</h1>
+        <img src={headerImg} alt="Rick and Morty" />{" "}
+        <h1 className="title">Take a look </h1>
       </header>
     );
   }

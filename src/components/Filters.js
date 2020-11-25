@@ -14,14 +14,14 @@ const Filters = (props) => {
     <section>
       <form className="form" onKeyDown={handleSubmit}>
         <label className="form_label" htmlFor="name">
-          Filtrar por nombre
+          Search by name
         </label>
         <input
           className="form_input__text"
           type="name"
           name="name"
           id="name"
-          placeholder="¿Quién es tu favorito?"
+          placeholder="Who's your favourite?"
           onChange={handleChange}
         />
 
@@ -34,8 +34,8 @@ const Filters = (props) => {
           id="species"
           onChange={handleChange}
         >
-          <option value="All">Todos</option>
-          <option value="Human">Humano</option>
+          <option value="All">All</option>
+          <option value="Human">Human</option>
           <option value="Alien">Alien</option>
         </select>
       </form>

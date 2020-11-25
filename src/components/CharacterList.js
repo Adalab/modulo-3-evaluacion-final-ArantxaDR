@@ -1,6 +1,7 @@
 import React from "react";
 import CharacterCard from "./CharacterCard";
 import PropTypes from "prop-types";
+import ErrorPage from "./ErrorPage";
 
 const CharacterList = (props) => {
   const itemsElements = props.items.map((items) => {
@@ -9,7 +10,11 @@ const CharacterList = (props) => {
 
   return (
     <section>
-      <ul className="card">{itemsElements}</ul>
+      {itemsElements.length === 0 ? (
+        <ErrorPage />
+      ) : (
+        <ul className="card">{itemsElements}</ul>
+      )}
     </section>
   );
 };

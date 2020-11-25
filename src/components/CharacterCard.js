@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 const CharacterCard = (props) => {
   return (
-    <Link to={`/character/${props.items.id}`}>
+    <Link to={`/character/${props.items.id}`} className="cards">
       <li className="card_item">
         <img
           className="card_item__img"

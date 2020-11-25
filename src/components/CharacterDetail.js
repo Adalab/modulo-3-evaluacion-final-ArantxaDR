@@ -5,7 +5,7 @@ import gunPortal from "../stylesheets/img/gunportal.png";
 
 const CharacterDetail = (props) => {
   if (props.item === undefined) {
-    return <h1>No existe el ser sideral que estás buscando</h1>;
+    return <h1>Ups! Wrong path</h1>;
   } else {
     console.log(props.item);
     return (
@@ -22,13 +22,13 @@ const CharacterDetail = (props) => {
             </div>
             <ul className="card_detail__list">
               <li>{`Status: ${props.item.status}`}</li>
-              <i class="fas fa-skull"></i>
-              <i class="fas fa-heartbeat"></i>
+              <i className="fas fa-skull"></i>
+              <i className="fas fa-heartbeat"></i>
               <li>{`Specie: ${props.item.species}`}</li>
-              <i class="fas fa-user"></i>
-              <i class="fas fa-rocket"></i>
+              <i className="fas fa-user"></i>
+              <i className="fas fa-rocket"></i>
               <li>{`Origin: ${props.item.origin}`}</li>
-              <li>{`Episodes Nº: ${parseInt(props.item.episodes.lenght)}`}</li>
+              <li>{`Episodes Nº: ${props.item.episodes.length}`}</li>
             </ul>
           </div>
         </div>
