@@ -1,6 +1,22 @@
+@import "./core/variables";
+
 .form {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  padding: 5px;
+  color: $color-secondary;
+  font-size: 30px;
+  font-family: $font-secondary;
+  margin-bottom: 50px;
+  &_label {
+    margin-left: 150px;
+  }
+  &_input__text {
+    background-color: $color-primary;
+    outline: none;
+    border-radius: 10px;
+    margin-right: 150px;
+  }
 }
