@@ -7,12 +7,13 @@ import React, { useEffect, useState } from "react";
 import Footer from "./Footer";
 import getDataFromApi from "../services/DataFromApi";
 import { Route, Switch } from "react-router-dom";
+import Location from "./Location";
 
 const App = () => {
   const [items, setItems] = useState([]);
   const [nameFilter, setNameFilter] = useState("");
   const [speciesFilter, setSpeciesFilter] = useState("All");
-
+  const [locationFilter, setLocationFilter] = useState("");
   useEffect(() => {
     getDataFromApi().then((data) => setItems(data));
   }, []);
@@ -22,6 +23,9 @@ const App = () => {
       setNameFilter(data.value);
     } else if (data.key === "species") {
       setSpeciesFilter(data.value);
+    } else if (data.key === "location") {
+      setLocationFilter(data.value);
+      console.log(data);
     }
   };
   const filteredCharacters = items
@@ -30,6 +34,9 @@ const App = () => {
     })
     .filter((item) => {
       return speciesFilter === "All" ? true : item.species === speciesFilter;
+    })
+    .filter((item) => {
+      return item.location.toUpperCase().includes(locationFilter.toUpperCase());
     });
 
   const renderCharacterDetail = (props) => {
@@ -48,6 +55,7 @@ const App = () => {
 
       <main className="main">
         <Route exact path="/">
+          <Location handleFilters={handleFilters} />
           <Filters handleFilters={handleFilters} />
           <CharacterList items={filteredCharacters} />
         </Route>
