@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   border: $color-terciary solid 5px;
-  border-radius: 10px;
+  border-radius: 50px;
   width: 300px;
   height: 300px;
   list-style: none;
@@ -15,12 +15,13 @@
   font-size: 10px;
   background-color: $color-secondary;
   &:hover {
-    box-shadow: 5px 5px $color-primary;
+    box-shadow: 8px 5px $color-primary;
   }
   &__img {
     width: 150px;
     height: 150px;
     border-radius: 5px;
+    box-shadow: 1px 7px 10px rgb(71, 68, 68);
   }
 }
 .cards {

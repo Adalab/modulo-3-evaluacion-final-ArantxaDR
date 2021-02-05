@@ -8,12 +8,15 @@
 .title_character__notfound {
   margin-bottom: 30px;
   font-family: $font-primary;
-  color: $color-secondary;
+  color: #ad5f3a;
+  font-size: 20px;
+  box-shadow: 1px 7px 10px rgb(0, 0, 0);
 }
 .title_character__tryagain {
   font-size: 25px;
   font-family: $font-primary;
-  color: $color-secondary;
+  color: #9a3d11;
+  box-shadow: 1px 7px 10px rgb(0, 0, 0);
 }
 .img_notfound {
   height: 300px;

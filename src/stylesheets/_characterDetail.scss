@@ -40,11 +40,12 @@
   &__img {
     height: 50px;
     width: 50px;
-    margin-right: 50px;
+    margin-right: 10px;
   }
   &__text {
     font-size: 40px;
     color: $color-secondary;
     font-family: $font-primary;
+    text-shadow: 0 0 10px $color-terciary, 0 0 15px$color-terciary;
   }
 }

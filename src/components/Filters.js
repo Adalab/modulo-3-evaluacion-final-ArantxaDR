@@ -14,7 +14,7 @@ const Filters = (props) => {
     <section>
       <form className="form" onKeyDown={handleSubmit}>
         <label className="form_label" htmlFor="name">
-          Search by name
+          Name
         </label>
         <input
           className="form_input__text"
@@ -26,7 +26,7 @@ const Filters = (props) => {
         />
 
         <label className="form_label" htmlFor="location">
-          Search by location
+          Location
         </label>
         <input
           className="form_input__text"
