@@ -1,6 +1,7 @@
 body {
   background-image: url(../img/backgroundR&M.jpg);
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: top;
-  color: white;
+  background-repeat: no-repeat;
+  color: $color-primary;
 }

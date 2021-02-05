@@ -25,6 +25,18 @@ const Filters = (props) => {
           onChange={handleChange}
         />
 
+        <label className="form_label" htmlFor="location">
+          Search by location
+        </label>
+        <input
+          className="form_input__text"
+          type="text"
+          name="location"
+          id="location"
+          onChange={handleChange}
+          placeholder="E.g Earth"
+        ></input>
+
         <label className="form_label" htmlFor="species">
           Specie
         </label>

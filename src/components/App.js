@@ -5,9 +5,8 @@ import CharacterList from "./CharacterList";
 import CharacterDetail from "./CharacterDetail";
 import React, { useEffect, useState } from "react";
 import Footer from "./Footer";
-import getDataFromApi from "../services/DataFromApi";
+import getDataFromApi from "../services/DatafromApi";
 import { Route, Switch } from "react-router-dom";
-import Location from "./Location";
 
 const App = () => {
   const [items, setItems] = useState([]);
@@ -55,7 +54,6 @@ const App = () => {
 
       <main className="main">
         <Route exact path="/">
-          <Location handleFilters={handleFilters} />
           <Filters handleFilters={handleFilters} />
           <CharacterList items={filteredCharacters} />
         </Route>
