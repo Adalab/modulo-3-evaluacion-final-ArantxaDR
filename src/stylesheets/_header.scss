@@ -3,7 +3,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
+  &__img {
+    width: 500px;
+  }
 }
 .title {
   font-size: 70px;

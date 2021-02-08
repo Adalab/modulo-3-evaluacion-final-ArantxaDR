@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import gunPortal from "../stylesheets/img/gunportal.png";
+import home from "../stylesheets/img/home.jpg";
 
 const CharacterDetail = (props) => {
   if (props.item === undefined) {
@@ -11,7 +11,7 @@ const CharacterDetail = (props) => {
     return (
       <>
         <Link to="/" className="home_link" title="Home l">
-          <img className="home_link__img" src={gunPortal} alt="Gunportal" />
+          <img className="home_link__img" src={home} alt="Home img" />
           <p className="home_link__text">Home </p>
         </Link>
         <div className="card_detail">

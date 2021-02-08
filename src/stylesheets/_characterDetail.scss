@@ -27,7 +27,6 @@
     color: $color-secondary;
   }
   &__img {
-    height: 200px;
     width: 200px;
   }
 }
@@ -38,9 +37,9 @@
   align-items: center;
   text-decoration: none;
   &__img {
-    height: 50px;
-    width: 50px;
+    width: 100px;
     margin-right: 10px;
+    border-radius: 30%;
   }
   &__text {
     font-size: 40px;
