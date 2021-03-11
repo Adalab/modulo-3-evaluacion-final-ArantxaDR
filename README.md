@@ -1,4 +1,4 @@
-# Final evaluation React (en proeso de mejora)
+# Final evaluation React (en proceso de mejora)
 
 We needed to make a website showing different Rick and Morty characters and some info about them.
 This is the final exam for Adalab front-end bootcamp.
